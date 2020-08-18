@@ -1,0 +1,14 @@
+---
+version: "3"
+services:  
+  musenfc-api:
+    image: guidaross/nfcunescmuseu:1.0    
+    hostname: api
+    ports:
+      - "81:80"
+    networks:
+      - museunfc
+      
+networks:
+  museunfc:
+    driver: bridge

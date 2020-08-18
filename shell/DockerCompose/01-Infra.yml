@@ -1,0 +1,18 @@
+---
+version: "3"
+services:
+  postgres:
+    image: postgres:11.5    
+    hostname: postgres
+    environment:
+      POSTGRES_PASSWORD: yxv.63929
+    volumes:
+      - /data/museunfc/pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+    - museunfc
+
+networks:
+  museunfc:
+    driver: bridge
